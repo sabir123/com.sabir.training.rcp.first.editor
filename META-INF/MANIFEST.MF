@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Editor
+Bundle-SymbolicName: com.sabir.training.rcp.first.editor;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SABIR
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.apache.felix.scr,
+ org.eclipse.equinox.util,
+ org.eclipse.equinox.event
+Automatic-Module-Name: com.sabir.training.rcp.first.editor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
