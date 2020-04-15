@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.sabir.training.rcp.first.editor.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.sabir.training.rcp.first.editor.Perspective"
+            name="RCP Perspective"
+            id="com.sabir.training.rcp.first.editor.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.sabir.training.rcp.first.editor.FirstEditor"
+            default="false"
+            icon="icons/eclipse16.png"
+            id="com.sabir.training.rcp.first.editor.ID"
+            name="First Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Opens Editor"
+            id="com.sabir.training.rcp.first.editor.open"
+            name="Open Editor">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.sabir.training.rcp.first.handlers.OpenEditorHandler"
+            commandId="com.sabir.training.rcp.first.editor.open">
+      </handler>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <command
+                  commandId="com.sabir.training.rcp.first.editor.open"
+                  label="Open Editor">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.save"
+                  label="Save"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+   </extension>
+
+</plugin>
